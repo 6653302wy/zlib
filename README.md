@@ -6,12 +6,12 @@
 ###解压
 
     let plain = new Uint8Array(data);  //data is a ArrayBuffer
-        let inflate = new Zlib.Inflate(plain);
-	    let deplain = inflate.decompress();
-	        let lastbytes = deplain.buffer;
-		    //egret 将二进制解析成object
-		        let bytes: egret.ByteArray = new egret.ByteArray(lastbytes);
-			    let obj = JSON.parse(bytes.readUTFBytes(lastbytes.byteLength));
+    let inflate = new Zlib.Inflate(plain);
+	let deplain = inflate.decompress();
+	let lastbytes = deplain.buffer;
+	//egret 将二进制解析成object
+	let bytes: egret.ByteArray = new egret.ByteArray(lastbytes);
+	let obj = JSON.parse(bytes.readUTFBytes(lastbytes.byteLength));
 
 
 
